@@ -1,0 +1,49 @@
+.refund-page .legal-document section {
+  scroll-margin-top: calc(var(--navigation-height) + 2rem);
+}
+
+.policy-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: var(--blue-fill);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius-medium);
+}
+
+.policy-highlight > i {
+  flex: 0 0 auto;
+  margin-top: 0.125rem;
+  color: var(--blue);
+  font-size: 0.875rem;
+}
+
+.policy-highlight strong {
+  display: block;
+  color: var(--label);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.policy-highlight p {
+  margin-top: 0.375rem;
+  color: var(--tertiary-label);
+  font-size: 0.75rem;
+  line-height: 1.65;
+}
+
+.refund-page .legal-document ul {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 37.5rem) {
+  .refund-page .legal-hero h1 {
+    font-size: clamp(3rem, 14vw, 4.6rem);
+  }
+
+  .policy-highlight {
+    padding: 1rem;
+  }
+}

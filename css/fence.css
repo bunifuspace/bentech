@@ -1,0 +1,582 @@
+.electric-page {
+  overflow: hidden;
+}
+
+.electric-hero {
+  position: relative;
+  min-height: 88svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.electric-hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.electric-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.electric-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.84) 0%,
+    rgba(0, 0, 0, 0.58) 42%,
+    rgba(0, 0, 0, 0.16) 100%
+  );
+}
+
+.electric-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+  padding-block: 7rem;
+}
+
+.electric-hero .section-label {
+  color: #5ac8fa;
+}
+
+.electric-hero h1 {
+  max-width: 58rem;
+  margin-top: 1.5rem;
+  color: var(--white);
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 700;
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+}
+
+.electric-hero h1 span {
+  display: block;
+  color: #5ac8fa;
+}
+
+.electric-hero p {
+  max-width: 38rem;
+  margin-block: 2rem 2.25rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.electric-intro {
+  padding-block: 8rem;
+}
+
+.electric-intro-inner {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+}
+
+.electric-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  gap: 5rem;
+  margin-top: 2.5rem;
+}
+
+.electric-intro h2,
+.electric-heading h2,
+.electric-coverage-copy h2 {
+  color: var(--label);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.electric-intro h2 span,
+.electric-heading h2 span,
+.electric-coverage-copy h2 span {
+  color: var(--quaternary-label);
+}
+
+.electric-intro-grid > div {
+  align-self: end;
+}
+
+.electric-intro-grid p {
+  max-width: 31rem;
+  color: var(--tertiary-label);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.electric-intro-grid p + p {
+  margin-top: 1.25rem;
+}
+
+.electric-showcase {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  min-height: 40rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
+  margin-inline: auto;
+  overflow: hidden;
+  background: var(--secondary-system-background);
+  border-radius: var(--radius-xl);
+}
+
+.electric-showcase-image {
+  min-height: 40rem;
+  overflow: hidden;
+}
+
+.electric-showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-emphasized);
+}
+
+.electric-showcase:hover .electric-showcase-image img {
+  transform: scale(1.035);
+}
+
+.electric-showcase-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.electric-showcase-copy h2 {
+  max-width: 29rem;
+  margin-top: 1.25rem;
+  color: var(--label);
+  font-family: var(--font-heading);
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.electric-showcase-copy h2 span {
+  color: var(--blue);
+}
+
+.electric-showcase-copy > p {
+  max-width: 27rem;
+  margin-top: 1.5rem;
+  color: var(--tertiary-label);
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.electric-points {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.electric-points div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--secondary-label);
+  font-size: 0.75rem;
+}
+
+.electric-points i {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  background: var(--blue-fill);
+  border-radius: var(--radius-small);
+  font-size: 0.7rem;
+}
+
+.electric-features {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+  padding-block: 8rem;
+}
+
+.electric-heading {
+  margin-bottom: 3rem;
+}
+
+.electric-heading > p {
+  max-width: 31rem;
+  margin-top: 1.25rem;
+  color: var(--tertiary-label);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.electric-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--separator);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-large);
+}
+
+.electric-feature-grid article {
+  min-height: 20rem;
+  padding: 2.25rem;
+  background: var(--system-background);
+}
+
+.electric-feature-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  background: var(--blue-fill);
+  border-radius: var(--radius-small);
+}
+
+.electric-feature-grid article > span {
+  display: block;
+  margin-top: 2.5rem;
+  color: var(--quaternary-label);
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+}
+
+.electric-feature-grid h3 {
+  margin-top: 0.75rem;
+  color: var(--label);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.electric-feature-grid p {
+  max-width: 17rem;
+  margin-top: 0.5rem;
+  color: var(--tertiary-label);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.electric-coverage {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  min-height: 38rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  margin-inline: auto;
+  overflow: hidden;
+  background: var(--secondary-system-background);
+  border-radius: var(--radius-xl);
+}
+
+.electric-coverage-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.electric-coverage-copy h2 {
+  max-width: 31rem;
+  margin-top: 1.25rem;
+}
+
+.electric-coverage-copy p {
+  max-width: 28rem;
+  margin-top: 1.5rem;
+  color: var(--tertiary-label);
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.electric-coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--separator);
+}
+
+.electric-coverage-grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  background: var(--system-background);
+}
+
+.electric-coverage-grid i {
+  color: var(--blue);
+  font-size: 1.25rem;
+}
+
+.electric-coverage-grid strong {
+  margin-top: 1rem;
+  color: var(--label);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+}
+
+.electric-coverage-grid span {
+  margin-top: 0.375rem;
+  color: var(--tertiary-label);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.electric-process {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+  padding-block: 8rem;
+}
+
+.electric-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--card-gap);
+}
+
+.electric-process-grid article {
+  min-height: 18rem;
+  padding: 2rem;
+  background: var(--secondary-system-background);
+  border-radius: var(--radius-medium);
+}
+
+.electric-process-grid article > span {
+  color: var(--blue);
+  font-family: var(--font-script);
+  font-size: 0.8125rem;
+}
+
+.electric-process-grid i {
+  display: block;
+  margin-block: 3.5rem 1.375rem;
+  color: var(--blue);
+  font-size: 1.375rem;
+}
+
+.electric-process-grid h3 {
+  color: var(--label);
+  font-size: 1.125rem;
+}
+
+.electric-process-grid p {
+  margin-top: 0.5rem;
+  color: var(--tertiary-label);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.electric-cta {
+  width: min(90%, var(--content-width));
+  margin: 0 auto 5rem;
+  padding: 7rem 5rem;
+  background: var(--label);
+  border-radius: var(--radius-xl);
+}
+
+.electric-cta .section-label {
+  color: #5ac8fa;
+}
+
+.electric-cta h2 {
+  max-width: 55rem;
+  margin-top: 1.25rem;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.electric-cta h2 span {
+  display: block;
+  color: #5ac8fa;
+}
+
+.electric-cta p {
+  max-width: 31rem;
+  margin-block: 1.75rem 2rem;
+  color: #a1a1a6;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.electric-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.electric-cta .button-ghost {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.electric-cta .button-ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 64rem) {
+  .electric-hero {
+    min-height: 78svh;
+  }
+
+  .electric-intro,
+  .electric-features,
+  .electric-process {
+    padding-block: 6rem;
+  }
+
+  .electric-intro-grid {
+    gap: 3rem;
+  }
+
+  .electric-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .electric-showcase-image {
+    min-height: 30rem;
+  }
+
+  .electric-showcase-copy {
+    min-height: 32rem;
+  }
+
+  .electric-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .electric-coverage {
+    grid-template-columns: 1fr;
+  }
+
+  .electric-coverage-copy {
+    min-height: 30rem;
+  }
+
+  .electric-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .electric-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .electric-hero h1 {
+    font-size: clamp(3.5rem, 10vw, 6rem);
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .electric-hero {
+    min-height: 82svh;
+  }
+
+  .electric-hero-content {
+    padding-block: 5rem;
+  }
+
+  .electric-hero h1 {
+    font-size: clamp(3rem, 15vw, 4.8rem);
+  }
+
+  .electric-hero p {
+    font-size: 0.875rem;
+  }
+
+  .electric-intro,
+  .electric-features,
+  .electric-process {
+    padding-block: 5rem;
+  }
+
+  .electric-intro-inner,
+  .electric-showcase,
+  .electric-features,
+  .electric-coverage,
+  .electric-process {
+    width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  }
+
+  .electric-intro h2,
+  .electric-heading h2,
+  .electric-coverage-copy h2 {
+    font-size: clamp(2.4rem, 11vw, 3.5rem);
+  }
+
+  .electric-showcase {
+    border-radius: var(--radius-large);
+  }
+
+  .electric-showcase-image {
+    min-height: 20rem;
+  }
+
+  .electric-showcase-copy {
+    min-height: auto;
+    padding: 3rem 1.75rem;
+  }
+
+  .electric-showcase-copy h2 {
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .electric-feature-grid {
+    grid-template-columns: 1fr;
+    border-radius: var(--radius-medium);
+  }
+
+  .electric-feature-grid article {
+    min-height: 17rem;
+    padding: 2rem 1.75rem;
+  }
+
+  .electric-coverage {
+    border-radius: var(--radius-large);
+  }
+
+  .electric-coverage-copy {
+    min-height: auto;
+    padding: 3rem 1.75rem;
+  }
+
+  .electric-coverage-grid div {
+    padding: 2rem 1.5rem;
+  }
+
+  .electric-coverage-grid strong {
+    font-size: 1rem;
+  }
+
+  .electric-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .electric-cta {
+    width: calc(100% - (var(--page-padding) * 2));
+    margin-bottom: 3.5rem;
+    padding: 3.5rem 1.75rem;
+    border-radius: var(--radius-large);
+  }
+
+  .electric-cta h2 {
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .electric-cta p {
+    font-size: 0.8125rem;
+  }
+}

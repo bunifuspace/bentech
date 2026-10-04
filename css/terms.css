@@ -1,0 +1,233 @@
+.legal-page {
+  overflow: hidden;
+}
+
+.legal-hero {
+  padding: 10rem 0 7rem;
+  background: var(--secondary-system-background);
+}
+
+.legal-hero-inner {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+}
+
+.legal-hero h1 {
+  max-width: 60rem;
+  margin-top: 1.25rem;
+  color: var(--label);
+  font-family: var(--font-script);
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 700;
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+}
+
+.legal-hero h1 span {
+  display: block;
+  color: var(--blue);
+}
+
+.legal-hero p {
+  max-width: 36rem;
+  margin-top: 2rem;
+  color: var(--tertiary-label);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.legal-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.legal-meta span {
+  color: var(--quaternary-label);
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.legal-meta strong {
+  color: var(--secondary-label);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.legal-content {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 6rem;
+  margin-inline: auto;
+  padding-block: 7rem;
+}
+
+.legal-sidebar {
+  position: sticky;
+  top: calc(var(--navigation-height) + 2rem);
+  align-self: start;
+}
+
+.legal-sidebar > span {
+  color: var(--quaternary-label);
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.legal-sidebar nav {
+  display: grid;
+  gap: 0.125rem;
+  margin-top: 1rem;
+}
+
+.legal-sidebar a {
+  padding: 0.5rem 0.625rem;
+  color: var(--tertiary-label);
+  border-radius: var(--radius-small);
+  font-size: 0.6875rem;
+  transition:
+    color 0.2s var(--ease-standard),
+    background 0.2s var(--ease-standard);
+}
+
+.legal-sidebar a:hover {
+  color: var(--label);
+  background: var(--secondary-system-background);
+}
+
+.legal-document {
+  max-width: 48rem;
+}
+
+.legal-document section {
+  padding-block: 3.5rem;
+  border-bottom: 1px solid var(--separator);
+}
+
+.legal-document section:first-child {
+  padding-top: 0;
+}
+
+.legal-document section:last-child {
+  border-bottom: 0;
+}
+
+.legal-number {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.legal-document h2 {
+  color: var(--label);
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.legal-document p {
+  margin-top: 1.25rem;
+  color: var(--tertiary-label);
+  font-size: 0.875rem;
+  line-height: 1.85;
+}
+
+.legal-document ul {
+  display: grid;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+  padding-left: 1.25rem;
+  color: var(--tertiary-label);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.legal-document li::marker {
+  color: var(--blue);
+}
+
+.legal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.legal-link i {
+  font-size: 0.625rem;
+  transition: transform 0.2s var(--ease-emphasized);
+}
+
+.legal-link:hover i {
+  transform: translateX(0.25rem);
+}
+
+@media (max-width: 64rem) {
+  .legal-hero {
+    padding-block: 8rem 6rem;
+  }
+
+  .legal-content {
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: 3rem;
+    padding-block: 6rem;
+  }
+}
+
+@media (max-width: 50rem) {
+  .legal-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .legal-sidebar {
+    position: static;
+  }
+
+  .legal-sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .legal-hero {
+    padding-block: 6rem 5rem;
+  }
+
+  .legal-hero h1 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .legal-hero p {
+    font-size: 0.875rem;
+  }
+
+  .legal-content {
+    width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+    padding-block: 5rem;
+  }
+
+  .legal-document section {
+    padding-block: 2.75rem;
+  }
+
+  .legal-document p,
+  .legal-document ul {
+    font-size: 0.8125rem;
+  }
+}

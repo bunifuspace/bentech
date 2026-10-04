@@ -1,0 +1,456 @@
+.approach-page {
+  overflow: hidden;
+}
+
+.approach-hero {
+  min-height: 72svh;
+  display: flex;
+  align-items: flex-end;
+  padding: 9rem max(7vw, var(--page-padding)) 7rem;
+  background: var(--secondary-system-background);
+}
+
+.approach-hero-inner {
+  width: min(var(--content-width), 100%);
+  margin-inline: auto;
+}
+
+.approach-hero h1 {
+  max-width: 65rem;
+  margin-top: 1.5rem;
+  color: var(--label);
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+.approach-hero h1 span {
+  display: block;
+  color: var(--blue);
+}
+
+.approach-hero p {
+  max-width: 38rem;
+  margin-top: 2rem;
+  color: var(--tertiary-label);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.approach-intro {
+  padding-block: 8rem;
+}
+
+.approach-intro-inner {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+}
+
+.approach-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  gap: 5rem;
+  margin-top: 2.5rem;
+}
+
+.approach-intro h2,
+.approach-heading h2 {
+  color: var(--label);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.approach-intro h2 span,
+.approach-heading h2 span {
+  color: var(--quaternary-label);
+}
+
+.approach-intro-grid > div {
+  align-self: end;
+}
+
+.approach-intro-grid p {
+  max-width: 31rem;
+  color: var(--tertiary-label);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.approach-intro-grid p + p {
+  margin-top: 1.25rem;
+}
+
+.approach-feature {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  min-height: 42rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--secondary-system-background);
+}
+
+.approach-feature-image {
+  min-height: 42rem;
+  overflow: hidden;
+}
+
+.approach-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-emphasized);
+}
+
+.approach-feature:hover .approach-feature-image img {
+  transform: scale(1.035);
+}
+
+.approach-feature-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.approach-feature-copy h2 {
+  max-width: 28rem;
+  margin-top: 1.5rem;
+  color: var(--label);
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.approach-feature-copy h2 span {
+  color: var(--blue);
+}
+
+.approach-feature-copy p {
+  max-width: 27rem;
+  margin-top: 1.5rem;
+  color: var(--tertiary-label);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.approach-principles,
+.approach-process {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+  padding-block: 8rem;
+}
+
+.approach-heading {
+  margin-bottom: 3rem;
+}
+
+.approach-heading h2 {
+  max-width: 48rem;
+  margin-top: 1.25rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--separator);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-large);
+}
+
+.principle {
+  position: relative;
+  min-height: 20rem;
+  padding: 2.5rem;
+  background: var(--system-background);
+}
+
+.principle-number {
+  color: var(--quaternary-label);
+  font-family: var(--font-script);
+  font-size: 0.812rem;
+  letter-spacing: 0.1em;
+  color: var(--green);
+}
+
+.principle-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+  color: var(--blue);
+  background: var(--blue-fill);
+  border-radius: var(--radius-small);
+}
+
+.principle h3 {
+  margin-top: 1.25rem;
+  color: var(--label);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.principle p {
+  max-width: 18rem;
+  margin-top: 0.5rem;
+  color: var(--tertiary-label);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.approach-statement {
+  width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  margin-inline: auto;
+  padding: 7rem 5rem;
+  overflow: hidden;
+  background: var(--secondary-system-background);
+  border-radius: var(--radius-xl);
+}
+
+.approach-statement-inner {
+  max-width: 62rem;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.approach-statement blockquote {
+  margin-top: 1.5rem;
+  color: var(--label);
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.approach-statement p {
+  max-width: 34rem;
+  margin: 1.75rem auto 0;
+  color: var(--tertiary-label);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.approach-process {
+  padding-bottom: 7rem;
+}
+
+.approach-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--card-gap);
+}
+
+.approach-process-grid article {
+  min-height: 19rem;
+  padding: 2rem;
+  background: var(--secondary-system-background);
+  border-radius: var(--radius-medium);
+}
+
+.approach-process-grid article > span {
+  color: var(--blue);
+  font-family: var(--font-script);
+  font-size: 0.8125rem;
+}
+
+.approach-process-grid i {
+  display: block;
+  margin-block: 3.5rem 1.375rem;
+  color: var(--blue);
+  font-size: 1.375rem;
+}
+
+.approach-process-grid h3 {
+  color: var(--label);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.approach-process-grid p {
+  margin-top: 0.5rem;
+  color: var(--tertiary-label);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.approach-cta {
+  width: min(90%, var(--content-width));
+  margin: 0 auto 5rem;
+  padding: 7rem 5rem;
+  overflow: hidden;
+  background: var(--label);
+  border-radius: var(--radius-xl);
+}
+
+.approach-cta h2 {
+  max-width: 56rem;
+  margin-top: 1.25rem;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.approach-cta h2 span {
+  display: block;
+  color: #5ac8fa;
+}
+
+.approach-cta p {
+  max-width: 32rem;
+  margin-block: 1.75rem 2rem;
+  color: #a1a1a6;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 64rem) {
+  .approach-hero {
+    min-height: 65svh;
+  }
+
+  .approach-intro {
+    padding-block: 6rem;
+  }
+
+  .approach-intro-grid {
+    gap: 3rem;
+  }
+
+  .approach-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-feature-image {
+    min-height: 30rem;
+  }
+
+  .approach-feature-copy {
+    min-height: 32rem;
+  }
+
+  .principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .approach-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .approach-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .approach-hero h1 {
+    font-size: clamp(3rem, 9vw, 5rem);
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .approach-hero {
+    min-height: 75svh;
+    padding: 8rem var(--page-padding) 4rem;
+  }
+
+  .approach-hero h1 {
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+  }
+
+  .approach-hero p {
+    font-size: 0.875rem;
+  }
+
+  .approach-intro,
+  .approach-principles,
+  .approach-process {
+    padding-block: 5rem;
+  }
+
+  .approach-intro-inner,
+  .approach-principles,
+  .approach-process,
+  .approach-feature {
+    width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
+  }
+
+  .approach-intro h2,
+  .approach-heading h2 {
+    font-size: clamp(2.4rem, 11vw, 3.5rem);
+  }
+
+  .approach-feature {
+    border-radius: var(--radius-large);
+  }
+
+  .approach-feature-image {
+    min-height: 20rem;
+  }
+
+  .approach-feature-copy {
+    min-height: 28rem;
+    padding: 2.5rem 1.75rem;
+  }
+
+  .approach-feature-copy h2 {
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    border-radius: var(--radius-medium);
+  }
+
+  .principle {
+    min-height: 17rem;
+    padding: 2rem 1.75rem;
+  }
+
+  .principle-icon {
+    margin-top: 2.5rem;
+  }
+
+  .approach-statement {
+    width: calc(100% - (var(--page-padding) * 2));
+    padding: 4rem 1.75rem;
+    border-radius: var(--radius-large);
+  }
+
+  .approach-statement blockquote {
+    font-size: clamp(2.3rem, 11vw, 3.5rem);
+  }
+
+  .approach-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-cta {
+    width: calc(100% - (var(--page-padding) * 2));
+    margin-bottom: 3.5rem;
+    padding: 3.5rem 1.75rem;
+    border-radius: var(--radius-large);
+  }
+
+  .approach-cta h2 {
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .approach-cta p {
+    font-size: 0.8125rem;
+  }
+}

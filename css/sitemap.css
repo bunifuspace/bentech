@@ -1,0 +1,241 @@
+.sitemap-hero {
+  min-height: 42rem;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--navigation-height) + 5rem) max(7vw, var(--page-padding))
+    5rem;
+  background: var(--secondary-system-background);
+  overflow: hidden;
+}
+
+.sitemap-hero-content {
+  width: 100%;
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
+.sitemap-hero h1 {
+  max-width: 58rem;
+  margin-top: 1.25rem;
+  color: var(--label);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+.sitemap-hero h1 em {
+  display: block;
+  color: var(--blue);
+  font-style: normal;
+}
+
+.sitemap-hero p {
+  max-width: 36rem;
+  margin-top: 2rem;
+  color: var(--tertiary-label);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.sitemap {
+  padding-block: var(--section-space);
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.sitemap-group {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  min-height: 25rem;
+  padding: 2.25rem;
+  background: var(--secondary-system-background);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-large);
+  transition:
+    transform 0.35s var(--ease-emphasized),
+    box-shadow 0.35s var(--ease-standard);
+}
+
+.sitemap-group:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-medium);
+}
+
+.sitemap-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: var(--blue);
+  background: var(--blue-fill);
+  border-radius: var(--radius-small);
+}
+
+.sitemap-group h2 {
+  margin-top: 0.625rem;
+  color: var(--label);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.sitemap-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.sitemap-group li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6875rem 0;
+  color: var(--tertiary-label);
+  border-bottom: 1px solid var(--separator);
+  font-size: 0.8125rem;
+  transition:
+    color 0.2s var(--ease-standard),
+    padding-left 0.25s var(--ease-emphasized);
+}
+
+.sitemap-group li:last-child a {
+  border-bottom: 0;
+}
+
+.sitemap-group li a:hover {
+  padding-left: 0.375rem;
+  color: var(--blue);
+}
+
+.sitemap-group li a i {
+  color: var(--quaternary-label);
+  font-size: 0.5625rem;
+  transition:
+    color 0.2s var(--ease-standard),
+    transform 0.2s var(--ease-emphasized);
+}
+
+.sitemap-group li a:hover i {
+  color: var(--blue);
+  transform: translate(0.125rem, -0.125rem);
+}
+
+.sitemap-cta {
+  position: relative;
+  max-width: 90%;
+  margin-bottom: 5rem;
+  padding: 5rem;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--label);
+  border-radius: var(--radius-xl);
+}
+
+.sitemap-cta::before {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  top: -15rem;
+  right: -8rem;
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.5), transparent 65%);
+}
+
+.sitemap-cta > div {
+  position: relative;
+  z-index: 1;
+}
+
+.sitemap-cta .section-label {
+  color: #5ac8fa;
+}
+
+.sitemap-cta h2 {
+  max-width: 45rem;
+  margin-block: 1rem 1.25rem;
+  color: var(--white);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.sitemap-cta h2 span {
+  color: #5ac8fa;
+}
+
+.sitemap-cta p {
+  max-width: 32rem;
+  margin-bottom: 2rem;
+  color: #a1a1a6;
+  font-size: 0.9375rem;
+}
+
+.sitemap-cta .button-ghost {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.sitemap-cta .button-ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 64rem) {
+  .sitemap-hero {
+    min-height: 36rem;
+  }
+
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sitemap-group {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .sitemap-hero {
+    min-height: 34rem;
+    padding: calc(var(--navigation-height) + 3.5rem) var(--page-padding) 4rem;
+  }
+
+  .sitemap-hero h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .sitemap-hero p {
+    font-size: 0.875rem;
+  }
+
+  .sitemap-group {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: var(--radius-medium);
+  }
+
+  .sitemap-group h2 {
+    font-size: 1.5rem;
+  }
+
+  .sitemap-cta {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 3.5rem;
+    padding: 3.5rem 1.75rem;
+    border-radius: var(--radius-large);
+  }
+}

@@ -1,0 +1,25 @@
+.privacy-page .legal-hero h1 span {
+  color: var(--blue);
+}
+
+.privacy-page .legal-document section {
+  scroll-margin-top: calc(var(--navigation-height) + 2rem);
+}
+
+.privacy-page .legal-document ul {
+  margin-bottom: 0.25rem;
+}
+
+.privacy-page .legal-document li {
+  padding-left: 0.25rem;
+}
+
+.privacy-page .legal-meta strong {
+  font-family: var(--font-family);
+}
+
+@media (max-width: 37.5rem) {
+  .privacy-page .legal-hero h1 {
+    font-size: clamp(3rem, 14vw, 4.6rem);
+  }
+}
